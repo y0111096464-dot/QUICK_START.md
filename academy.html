@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة تعليمية متقدمة لتعليم البرمجة والتطوير">
+    <title>أكاديمية البرمجة المتقدمة - تعلم البرمجة مجاناً</title>
+    <link rel="stylesheet" href="css/academy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>أكاديمية البرمجة</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="nav-link active" data-page="home">الرئيسية</a></li>
+                <li><a href="#" class="nav-link" data-page="courses">الكورسات</a></li>
+                <li><a href="#" class="nav-link" data-page="paths">مسارات التعلم</a></li>
+                <li><a href="#" class="nav-link" data-page="achievements">الإنجازات</a></li>
+                <li><a href="#" class="nav-link" id="authLink" data-page="login">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Home Page -->
+        <div class="page" id="homePage">
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>تعلم البرمجة بطريقة احترافية</h1>
+                        <p>منصة تعليمية متقدمة مجانية 100% - دورات منظمة من المبتدئ إلى المتقدم</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" id="startLearning">ابدأ التعلم الآن</button>
+                            <button class="btn btn-outline" id="exploreCourses">استكشف المسارات</button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <h3 id="totalCourses">15+</h3>
+                                <p>دورة تعليمية</p>
+                            </div>
+                            <div class="stat">
+                                <h3 id="totalStudents">5000+</h3>
+                                <p>طالب نشط</p>
+                            </div>
+                            <div class="stat">
+                                <h3 id="totalHours">500+</h3>
+                                <p>ساعة تعليم</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Paths Section -->
+            <section class="learning-paths">
+                <div class="section-title">
+                    <h2>مسارات التعلم</h2>
+                    <p>اختر المسار المناسب لمستوى خبرتك</p>
+                </div>
+                <div class="paths-grid">
+                    <div class="path-card beginner">
+                        <div class="path-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>المستوى المبتدئ</h3>
+                        <p>ابدأ من الصفر وتعلم أساسيات البرمجة</p>
+                        <div class="path-info">
+                            <span><i class="fas fa-book"></i> 5 دورات</span>
+                            <span><i class="fas fa-clock"></i> 60 ساعة</span>
+                        </div>
+                        <ul class="path-topics">
+                            <li>HTML و CSS الأساسي</li>
+                            <li>JavaScript للمبتدئين</li>
+                            <li>Python الأساسي</li>
+                        </ul>
+                        <button class="btn btn-path" onclick="app.showPathDetails('beginner')">عرض الدورات</button>
+                    </div>
+
+                    <div class="path-card intermediate">
+                        <div class="path-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>المستوى المتوسط</h3>
+                        <p>طور مهاراتك وبناء مشاريع حقيقية</p>
+                        <div class="path-info">
+                            <span><i class="fas fa-book"></i> 5 دورات</span>
+                            <span><i class="fas fa-clock"></i> 80 ساعة</span>
+                        </div>
+                        <ul class="path-topics">
+                            <li>تطوير الويب المتقدم</li>
+                            <li>تطوير الألعاب</li>
+                            <li>React و Vue</li>
+                        </ul>
+                        <button class="btn btn-path" onclick="app.showPathDetails('intermediate')">عرض الدورات</button>
+                    </div>
+
+                    <div class="path-card advanced">
+                        <div class="path-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>المستوى المتقدم</h3>
+                        <p>اتقن البرمجة واحترف تطوير التطبيقات</p>
+                        <div class="path-info">
+                            <span><i class="fas fa-book"></i> 5 دورات</span>
+                            <span><i class="fas fa-clock"></i> 100 ساعة</span>
+                        </div>
+                        <ul class="path-topics">
+                            <li>Node.js و Backend</li>
+                            <li>قواعد البيانات</li>
+                            <li>الذكاء الاصطناعي</li>
+                        </ul>
+                        <button class="btn btn-path" onclick="app.showPathDetails('advanced')">عرض الدورات</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="section-title">
+                    <h2>لماذا أكاديميتنا؟</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>دورات منظمة</h3>
+                        <p>دورات مقسمة حسب المستويات من المبتدئ إلى المتقدم</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>شهادات معتمدة</h3>
+                        <p>احصل على شهادة عند إكمال كل دورة بنجاح</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>مشاريع عملية</h3>
+                        <p>طبق ما تعلمته في مشاريع حقيقية وعملية</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>دعم فني</h3>
+                        <p>فريق دعم متاح للإجابة على أسئلتك</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>متوافق مع جميع الأجهزة</h3>
+                        <p>تعلم في أي وقت وأي مكان على جميع الأجهزة</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-free"></i>
+                        </div>
+                        <h3>مجاني بالكامل</h3>
+                        <p>جميع الدورات مجانية 100% بدون أي رسوم</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Courses Page -->
+        <div class="page hidden" id="coursesPage">
+            <div class="page-header">
+                <h1>جميع الكورسات</h1>
+                <p>اختر من بين مئات الدورات التعليمية</p>
+            </div>
+
+            <div class="courses-filter">
+                <div class="filter-group">
+                    <input type="text" id="searchInput" class="search-input" placeholder="ابحث عن دورة...">
+                    <select id="levelFilter" class="filter-select">
+                        <option value="">جميع المستويات</option>
+                        <option value="beginner">مبتدئ</option>
+                        <option value="intermediate">متوسط</option>
+                        <option value="advanced">متقدم</option>
+                    </select>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">جميع التخصصات</option>
+                        <option value="web">تطوير الويب</option>
+                        <option value="games">تطوير الألعاب</option>
+                        <option value="backend">Backend</option>
+                        <option value="ai">الذكاء الاصطناعي</option>
+                        <option value="databases">قواعد البيانات</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="courses-grid" id="coursesGrid">
+                <!-- سيتم ملء الدورات هنا -->
+            </div>
+        </div>
+
+        <!-- Course Detail Page -->
+        <div class="page hidden" id="courseDetailPage">
+            <div class="course-detail-container">
+                <button class="btn-back" onclick="app.navigateTo('courses')">
+                    <i class="fas fa-arrow-right"></i> عودة إلى الكورسات
+                </button>
+                <div class="course-hero">
+                    <div class="course-hero-left">
+                        <div class="course-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="course-hero-right">
+                        <span class="course-badge" id="detailLevel"></span>
+                        <h1 id="detailName"></h1>
+                        <p id="detailDescription"></p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-user"></i> <span id="detailInstructor"></span></span>
+                            <span><i class="fas fa-users"></i> <span id="detailStudents"></span> طالب</span>
+                            <span><i class="fas fa-book-open"></i> <span id="detailLessons"></span> درس</span>
+                            <span><i class="fas fa-clock"></i> <span id="detailHours"></span> ساعة</span>
+                        </div>
+                        <button class="btn btn-primary btn-large" id="enrollBtn" onclick="app.enrollCourse()">
+                            الاشتراك الآن (مجاني)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-section">
+                        <h2>متطلبات الدورة</h2>
+                        <ul id="detailRequirements"></ul>
+                    </div>
+
+                    <div class="course-section">
+                        <h2>ما ستتعلمه</h2>
+                        <ul id="detailOutcomes"></ul>
+                    </div>
+
+                    <div class="course-section">
+                        <h2>محتوى الدورة</h2>
+                        <div id="detailLessonsList"></div>
+                    </div>
+
+                    <div class="course-section">
+                        <h2>المهارات التي ستكتسبها</h2>
+                        <div class="skills-list" id="detailSkills"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Paths Page -->
+        <div class="page hidden" id="pathsPage">
+            <div class="page-header">
+                <h1>مسارات التعلم</h1>
+                <p>اختر المسار المناسب لك وابدأ رحلة التعلم</p>
+            </div>
+            <div id="pathsContent"></div>
+        </div>
+
+        <!-- Achievements Page -->
+        <div class="page hidden" id="achievementsPage">
+            <div class="page-header">
+                <h1>إنجازاتك</h1>
+            </div>
+            <div class="achievements-container">
+                <div class="achievements-stats">
+                    <div class="stat-card">
+                        <h3 id="completedCourses">0</h3>
+                        <p>دورات مكتملة</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="earnedCertificates">0</h3>
+                        <p>شهادة مكتسبة</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="learningStreak">0</h3>
+                        <p>أيام متتالية</p>
+                    </div>
+                </div>
+                <div class="certificates-section">
+                    <h2>شهاداتك</h2>
+                    <div id="certificatesList" class="certificates-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Page -->
+        <div class="page hidden" id="loginPage">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2 id="authTitle">تسجيل الدخول</h2>
+                        <p id="authSubtitle">ادخل حسابك للمتابعة</p>
+                    </div>
+                    <form id="authForm">
+                        <div class="form-group" id="nameGroup" style="display:none;">
+                            <label for="authName">الاسم الكامل</label>
+                            <input type="text" id="authName" placeholder="أدخل اسمك" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="authEmail">البريد الإلكتروني</label>
+                            <input type="email" id="authEmail" placeholder="أدخل بريدك" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="authPassword">كلمة المرور</label>
+                            <input type="password" id="authPassword" placeholder="أدخل كلمة المرور" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">دخول</button>
+                    </form>
+                    <div class="auth-toggle">
+                        <p>ليس لديك حساب؟ <button type="button" onclick="app.toggleAuthForm()">إنشاء حساب جديد</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Page -->
+        <div class="page hidden" id="profilePage">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-info">
+                        <h1 id="profileName"></h1>
+                        <p id="profileEmail"></p>
+                    </div>
+                    <button class="btn btn-danger" onclick="app.logout()">تسجيل الخروج</button>
+                </div>
+
+                <div class="profile-content">
+                    <section class="profile-section">
+                        <h2>دورساتك المشتركة</h2>
+                        <div id="enrolledCoursesList" class="courses-grid"></div>
+                    </section>
+
+                    <section class="profile-section">
+                        <h2>تقدمك</h2>
+                        <div id="progressList"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Page -->
+        <div class="page hidden" id="adminPage">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <h1>لوحة التحكم الإدارية</h1>
+                    <button class="btn btn-danger" onclick="app.logout()">تسجيل الخروج</button>
+                </div>
+
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="dashboard" onclick="app.switchAdminTab(event)">
+                        <i class="fas fa-chart-pie"></i> لوحة القيادة
+                    </button>
+                    <button class="admin-tab" data-tab="courses" onclick="app.switchAdminTab(event)">
+                        <i class="fas fa-book"></i> الكورسات
+                    </button>
+                    <button class="admin-tab" data-tab="users" onclick="app.switchAdminTab(event)">
+                        <i class="fas fa-users"></i> المستخدمون
+                    </button>
+                </div>
+
+                <div class="admin-content">
+                    <!-- Dashboard Tab -->
+                    <div class="admin-tab-content active" id="dashboardTab">
+                        <div class="dashboard-stats">
+                            <div class="stat-box">
+                                <h3 id="adminTotalUsers">0</h3>
+                                <p>إجمالي المستخدمين</p>
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-box">
+                                <h3 id="adminTotalCourses">0</h3>
+                                <p>إجمالي الكورسات</p>
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="stat-box">
+                                <h3 id="adminTotalEnrollments">0</h3>
+                                <p>إجمالي الاشتراكات</p>
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+
+                        <div class="recent-users">
+                            <h2>آخر المستخدمين</h2>
+                            <table id="recentUsersTable" class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>الاسم</th>
+                                        <th>البريد</th>
+                                        <th>تاريخ الانضمام</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Courses Tab -->
+                    <div class="admin-tab-content" id="coursesTab">
+                        <div class="admin-add-course">
+                            <h2>إضافة كورس جديد</h2>
+                            <form id="addCourseForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>اسم الكورس</label>
+                                        <input type="text" id="adminCourseName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>المستوى</label>
+                                        <select id="adminCourseLevel" required>
+                                            <option value="beginner">مبتدئ</option>
+                                            <option value="intermediate">متوسط</option>
+                                            <option value="advanced">متقدم</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>المدرب</label>
+                                        <input type="text" id="adminCourseInstructor" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>عدد الدروس</label>
+                                        <input type="number" id="adminCourseLessons" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>الوصف</label>
+                                    <textarea id="adminCourseDesc" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">إضافة الكورس</button>
+                            </form>
+                        </div>
+
+                        <div class="admin-courses-list">
+                            <h2>قائمة الكورسات</h2>
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>الاسم</th>
+                                        <th>المدرب</th>
+                                        <th>المستوى</th>
+                                        <th>الطلاب</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="coursesTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Users Tab -->
+                    <div class="admin-tab-content" id="usersTab">
+                        <h2>قائمة المستخدمين</h2>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>الاسم</th>
+                                    <th>البريد</th>
+                                    <th>تاريخ التسجيل</th>
+                                    <th>الكورسات المشتركة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>أكاديمية البرمجة</h3>
+                <p>منصة تعليمية متقدمة لتعليم البرمجة والتطوير بشكل مجاني</p>
+            </div>
+            <div class="footer-section">
+                <h3>الروابط السريعة</h3>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">الكورسات</a></li>
+                    <li><a href="#">مسارات التعلم</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 أكاديمية البرمجة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/academy.js"></script>
+</body>
+</html>
