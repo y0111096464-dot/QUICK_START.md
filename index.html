@@ -33,7 +33,7 @@
         <div class="bg-white rounded-3xl p-8 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
                 <i data-lucide="shopping-bag"></i> تفاصيل الشحن
-            </h2>تكلفة الشحن 30 دينار 
+            </h2>تكلفة الشحن  حسب المنطقه  
             <div id="order-summary" class="mb-6 p-4 bg-gray-50 rounded-2xl"></div>
             <div class="space-y-4">
                 <input type="text" id="cust-name" placeholder="الاسم بالكامل" class="w-full p-3 border rounded-xl outline-none focus:border-black">
@@ -52,7 +52,7 @@
                 <div class="hidden md:flex items-center gap-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
                     <a href="#" class="hover:text-black transition">الرئيسية</a>
                     <a href="#store" class="hover:text-black transition">المتجر</a>
-                    <a href="#" onclick="toggleModal('admin-login-modal', true)" class="hover:text-black transition">لوحة التحكم</a>
+                    <a href="#" onclick="toggleModal('admin-login-modal', true)" class="hover:text-black transition">لوحة </a>
                 </div>
             </div>
             
@@ -125,11 +125,13 @@
     <main id="store-front">
         <!-- قسم الواجهة (Hero) -->
         <section class="relative h-[85vh] flex items-center overflow-hidden bg-gray-900">
-            <img id="display-hero-img" src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-60">
+            <img id="display-hero-img" src="https://scontent.fseb2-1.fna.fbcdn.net/v/t39.30808-6/497512282_1178565244332580_5545088376675702124_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x535&ctp=s1080x535&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HhTe5-ezl3IQ7kNvwHdEsLd&_nc_oc=AdonrUlZ2YfEbQCZOUOzT3J5K3FZZsr5B2Ai8KVyEKH-dkbSoBK3pQGwDXwbYiWNRzQ&_nc_zt=23&_nc_ht=scontent.fseb2-1.fna&_nc_gid=L6y8l4LyY3ZKW42n_ZB8Gw&_nc_ss=7b289&oh=00_Af82wZD2ryJDRDvC_FbmNL2rnq8K4xU_iCWhoKBPnF5F4A&oe=6A33C726">
             <div class="relative z-10 max-w-7xl mx-auto px-4 w-full text-white">
                 <div class="max-w-2xl space-y-6">
                     <h1 id="display-hero-title" class="text-6xl md:text-8xl font-black leading-tight tracking-tighter">أناقة الرجل الليبي</h1>
-                    <p id="display-hero-desc" class="text-xl md:text-2xl text-gray-200 font-light">مجموعة الميعاد الحصرية - مزيج بين الكلاسيكية والعصرية</p>
+                    <p id="display-hero-desc" class="text-xl md:text-2xl text-gray-200 font-light">مجموعة الميعاد الحصرية  | أناقتكم بضغطة زر.
+
+وجهتكم المثالية لتسوق أحدث الملابس العصرية بجودة ممتازة وتجربة شراء سلسة. نلبي تطلعاتكم لتكونوا دائماً في أبهى إطلالة.</p>
                     <div class="pt-6">
                         <a href="#store" class="inline-block bg-white text-black px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-transform">اكتشف المجموعة</a>
                     </div>
@@ -169,9 +171,11 @@
         // إعدادات الموقع الافتراضية (يمكن للمدير تغييرها)
         let siteConfig = {
             brandName: "الميعاد",
-            heroTitle: "أناقة الرجل الليبي",
+            heroTitle: "متجر الميعاد للملابس | أناقتكم بضغطة زر.
+
+وجهتكم المثالية لتسوق أحدث الملابس العصرية بجودة ممتازة وتجربة شراء سلسة. نلبي تطلعاتكم لتكونوا دائماً في أبهى إطلالة.",
             heroDesc: "مجموعة الميعاد الحصرية - مزيج بين الكلاسيكية والعصرية",
-            heroImg: "https://images.unsplash.com/photo-1550246140-5119ae4790b8?q=80&w=2000"
+            heroImg: "https://scontent.fseb2-1.fna.fbcdn.net/v/t39.30808-6/497512282_1178565244332580_5545088376675702124_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x535&ctp=s1080x535&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HhTe5-ezl3IQ7kNvwHdEsLd&_nc_oc=AdonrUlZ2YfEbQCZOUOzT3J5K3FZZsr5B2Ai8KVyEKH-dkbSoBK3pQGwDXwbYiWNRzQ&_nc_zt=23&_nc_ht=scontent.fseb2-1.fna&_nc_gid=L6y8l4LyY3ZKW42n_ZB8Gw&_nc_ss=7b289&oh=00_Af82wZD2ryJDRDvC_FbmNL2rnq8K4xU_iCWhoKBPnF5F4A&oe=6A33C726"
         };
 
         let products = [
